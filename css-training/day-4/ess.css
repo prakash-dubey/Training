@@ -1,0 +1,14 @@
+body{
+	background-color: red
+}
+
+p{
+	font-size: 20px;
+	font: "Times New Roman";
+	color: blue;
+}
+
+h1{
+     color: white;
+     background-color: black;	
+}
