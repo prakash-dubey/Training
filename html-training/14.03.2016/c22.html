@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<button onclick="greet()">Click ME!</button>
+		<p id = "demo"></p>
+		<script> 
+		  function greet() {
+			var greeting;
+			var time = new Date().getHours();
+			if (time < 18){
+				greeting = "Good Morning";
+			} else if (time < 20){
+				greeting = "Good Day";
+			} else {
+				greeting = "Good Evening";
+			}
+			document.getElementById("demo").innerHTML = greeting; }
+		</script>
+	</body>
+</html>

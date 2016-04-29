@@ -1,0 +1,36 @@
+                                                  //   REMOVE   \\
+
+	remove() --- remove the selected elements( and its child elements ) 
+	                            $("#div1").remove()
+
+	empty() --- removes the child elements of the selected elements
+	                            $("#div1").empty()
+
+	                             //  Filter the elements to be removed   \\
+
+    $("p").remove(".test") --- all <p>	elements with id = test will be removed 
+    
+
+    $("p").remove(".test,.demo") --- all <p> elements with id = test,demo will be removed.
+
+
+
+                                                //  CSS classes  \\
+
+    addClass() --- adds one or more classes to the selected elements
+                                $("h1,h2,h3").addClass("blue")
+
+     removeClass() --- removes a specific class attribute from different elements
+                                $("h1,h2,h3").removeClass("blue")                                                                                                          
+     toggleClass() --- toggles between adding/removing classes from the selected elements.
+                                $("h1,h2,h3").toggleClass("blue") 
+
+
+     css() --- sets or returns one or more style properties for the selected elements
+     
+         $("p").css("background-color") ---  returns the bckground color.
+
+
+         $("p").css("font-size", "200%")                           
+
+         jQuery greatly simplifies JavaScript programming.

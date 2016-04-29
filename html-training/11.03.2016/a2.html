@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Array</title>
+	</head>
+	<body>
+			<button onclick="myFunc()">Click ME!</button>
+			<p id ="demo"></p>
+			<script>
+			function myFunc() {
+				var index;
+				var text = "<ul>"
+				var cars = ["Mazda","Maserati","BMW"];
+				for(index = 0; index<cars.length; index++)
+					{
+						text += "<li>" + cars[index] + "</li>"
+					}
+				text += "</ul>";
+				document.getElementById("demo").innerHTML = text;
+			}
+				
+			</script>
+	</body>
+</html>

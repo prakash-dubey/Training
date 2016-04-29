@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>Learn JS</title>
+	</head>
+	<body>
+			<p id="one"> Click and font/size of this text changes.</p>
+			<script>
+				function textchange()
+				{
+					console.log("Hi")
+					var a = document.getElementById("one");
+					a.style.color = "red";
+					a.style.fontSize = "30px"
+				}
+			</script>
+			<button type="button" onclick="textchange()">Click me</button>
+	</body>
+</html>

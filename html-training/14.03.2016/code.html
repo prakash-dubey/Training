@@ -1,0 +1,59 @@
+                                                
+
+                                               \\  FILTERING  //
+
+$("div p").first() ----------  returns the first p element of first div( css is used to highlight that particular p element).
+
+$("div p").last()  ----------  returns the last p element of last div( css is used to highlight that particular p element).
+
+$("p").eq(1)   ----------  returns an element with a specific index number of the selected elements (index value starts from 0).
+
+$("p").filter(".intro")------ lets you specify a criteria to filter the elements.
+
+$("p").not(".intro")------ returns elements that do not match criteria.
+
+
+                                              \\  Traversing ANCESTORS  //
+
+$("span").parent() ------ returns the direct parent element of the selected element, only traverses a single level up the tree.
+
+$("span").parents()------ returns all ancestors all the way upto the root.
+
+$("span").parents("ul")------ optional search parameter , returns all parent element of span that are <ul> elements                                               
+
+$("span").parentsUntil("div")------ returns all parent elements between two given elements.
+
+
+                       	                       \\  Traversing DESCENDANTS	 //
+
+$("div").children()------ returns all direct children of the selected element, traverses only a single level down.
+
+$("div").children("p.first")----- returns first p element of the div with class name first.
+
+$("div").find("span")------ returns all descendant elements of the selected elements( all the way down ).
+
+$("div").find("*")----- returns all descendants elements.
+                            
+
+                                                \\  Traversing SIBLINGS	 //
+
+
+$("h2").siblings()----- returns all siblings of <h2> elements (siblings have same parent).
+
+$("h2").siblings("p")----- returns all siblings that are <p> elements.
+
+$("h2").next()----- returns the immediate next sibling of <h2> elements.
+
+$("h2").nextAll()---- returns all next siblings of the h2 elements.
+
+$("h2").nextUntil("h6")------ returns all siblings till <h6>
+
+
+$("h2").prev()----- returns the immediate prev sibling of <h2> elements.
+
+$("h2").prevAll()---- returns all prev siblings of the h2 elements.
+
+$("h6").prevUntil("h2")------ returns all siblings till <h2>.
+
+
+                                                

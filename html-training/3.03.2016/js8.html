@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>	
+	<body>
+		<p>enter a no</p>
+		<input id="numb">
+		<p id = "demo"></p>
+		<button type = "submit" onclick="isValid()">Submit</button>
+		<script>
+		function isValid(){
+			var x = document.getElementById("numb").value;
+			if ( isNaN(x) || x < 1 || x> 10){
+				text = "Invalid"; }
+			else{
+				text = "Valid"
+				}
+			document.getElementById("demo").innerHTML=text;
+		}
+		</script>
+	</body>
+</html>		
+
+
+

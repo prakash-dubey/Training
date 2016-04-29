@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<button onclick="myFunc()">Click Me!</button>
+		<p id ="p1">Hi How are you?</p>
+		<p id ="demo"></p>
+
+		<script>
+			function myFunc() {
+
+				var str = document.getElementById("p1").innerHTML;
+				var pos = str.indexOf("How");
+				document.getElementById("demo").innerHTML = pos;
+			}
+		</script>
+
+	</body>
+</html>

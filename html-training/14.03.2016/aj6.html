@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({url: "w3schools.com", dataType: "text", success: function(){
+            $("#p1").html();
+        }});
+    });
+});
+</script>
+</head>
+<body>
+
+<p id="p1"></p>
+
+<button>Click ME!</button>
+
+</body>
+</html>

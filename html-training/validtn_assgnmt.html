@@ -1,0 +1,175 @@
+<html>
+<head>
+  <title>Validation</title>
+  <script>
+  function validate() {
+
+    var x = document.forms["myForm"]["first_name"].value;
+    if (x == null) {
+      alert("First name must be filled out");
+      return false;
+    }
+
+    var y = document.forms["myForm"]["last_name"].value;
+    if (y == null || y == "") {
+      alert("Last name must be filled out");
+      return false;
+    }
+
+    var z = document.forms["myForm"]["phn_no"].value;
+    if (z == null || z == ""  ) {
+      alert("Phone no feild cannot be left empty");
+      return false;
+    }
+
+    if (isNaN(myForm.phn_no.value))
+    {
+      alert("Invalid Phone Number");
+      return false;
+    }
+
+    if ((document.forms["myForm"]["phn_no"].value).length != 10)
+    {
+       
+      alert("phone no shud b exact 10 digits");
+      return false;
+    }	
+
+    var a = document.forms["myForm"]["ofc_no"].value;
+    if (a == null || a == ""  ) {
+      alert("Office no feild cannot be left empty");
+      return false;
+    }
+
+    if (isNaN(myForm.ofc_no.value))
+    {
+      alert("Invalid office Number");
+      return false;
+    }
+
+    if ((document.forms["myForm"]["ofc_no"].value).length != 10)
+    {
+
+      alert("office no shud b min. 10 digits");
+      return false;
+    }	
+
+    var x = document.forms["myForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    
+    if (atpos<1 || dotpos<atpos+3 || dotpos+2>=x.length) {
+      alert("Not a valid e-mail address");
+      return false;
+    }
+
+    var c = document.forms["myForm"]["psw"].value;	
+    if (c == null || c == ""  ) {
+      alert("Password cannot be left empty");
+      return false;
+    }
+
+    var d = document.forms["myForm"]["cpsw"].value;  
+    if (d == null || d == ""  ) {
+      alert("Confirm Password feild cannot be left empty");
+      return false;
+    }
+
+    var password = document.forms["myForm"]["psw"].value;
+    var confirmPassword = document.forms["myForm"]["cpsw"].value;
+    if (password != confirmPassword) {
+      alert("Passwords do not match.");
+      return false;
+    }
+
+  }
+
+  </script>
+</head>
+<body>
+
+  <div style="height:60%;width:50%;border:1px solid black;color: #737373;margin-left:100px;margin-top:20px">
+    <form name="myForm" onsubmit="return validate()" method="post">
+      <div style="float:left; margin-left: 5px">
+        <label>First Name</label> <br>
+        <input name="first_name" size="" type="text" />
+      </div>
+
+      <div style="float:right; margin-left: 40px">
+        <label >Last Name</label> <br>
+        <input name="last_name" size="" type="text" />
+      </div>
+      <br/><br/><br/>	
+
+
+      <div style="float:left; margin-left: 5px">
+        <label>Phone No</label> <br>
+        <input name="phn_no" size="" type="text" />
+      </div>
+
+      <div style="float:right; margin-left: 40px">
+        <label>Office No</label> <br>
+        <input name="ofc_no" size="" type="text" />
+      </div>    <br><br><br>
+
+      <div style="float:left; margin-left: 5px">
+        <label>Email No:</label> <br>
+        <input name="email" size="" type="text"/>
+      </div>
+
+      <div style="float:right; margin-left: 40px">
+        <label>Password</label> <br>
+        <input name="psw" size="" type="password"/>
+      </div>    <br><br><br>
+
+      <div style="float:left; margin-left: 5px">
+        <label> Confirm Password</label> <br>
+        <input name="cpsw" size="" type="password" />
+      </div>   
+
+      <div style="float:right; margin-left: 40px">
+        <label>My Birthdate Is:</label > <br>
+          <select name="DOBMonth">
+            <option>Month</option>
+            <option value="January">January</option>
+            <option value="Febuary">Febuary</option>
+            <option value="March">March</option>
+          </select>
+
+          <select name="DOBDay">
+            <option>Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+
+          </select>
+
+          <select name="DOBYear">
+            <option>Year</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+
+          </select>
+        </div>    <br><br><br>
+
+        <div style="float:left; margin-left: 5px">
+          <label>Age</label> <br>
+          <input name="age" size="" type="text" />
+        </div> 
+
+        <div style="float:right; margin-left: px"> 
+          <br>
+          Gender:
+          <input type="radio" name="gender" value="male"  > Male
+          <input type="radio" name="gender" value="female" > Female<br>
+
+        </div>   <br><br><br>
+        <div align="center" style="margin-top:20px"><input type ="submit" value="Submit"></div>
+      </form> 
+    </div>    
+  </body>
+  </html>
