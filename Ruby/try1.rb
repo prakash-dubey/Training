@@ -1,0 +1,1 @@
+contents = File.read('newfile.txt')
