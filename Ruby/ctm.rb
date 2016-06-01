@@ -3,7 +3,7 @@ Overdoing it in Python 45min
 Lua for the Masses 30min
 Ruby Errors from Mismatched Gem Versions 45min
 Common Ruby Errors 45min
-Rails for Python Developers 5min
+Rails for Python Developers light
 Communicating Over Distance 60min
 Accounting-Driven Development 45min
 Woah 30min
@@ -18,23 +18,49 @@ Ruby on Rails Legacy App Maintenance 60min
 A World Without HackerNews 30min
 User Interface CSS in Rails Apps 30min"
 
+tasks = d.split("\n")
+check = 0
+start_time = Time.new(2015, 04, 14, 9, 0, 0)
+tasks.each do |i|
+	time =  i.scan(/(\d+)|light/)[0][0] == nil ? "5" : i.scan(/(\d+)|light/)[0][0]
+	#puts time.inspect
+	puts "#{start_time.strftime('%H:%M %p')} #{i}"
+		start_time = start_time + time.to_i*60
+		#puts start_time
+		check += time.to_i
+		#puts check
 
-# names = File.readlines('/home/webwerks/Ruby/test.txt')
-# matches = names.select { |name| name[/\d+|min/] }
-# puts matches
+		if   check <= 180 
+end
 
-# o_array = d.scan(/\d+/)
-# t = []
-# o_array.each do |i|
-# 	if ( i % 2 == 0)
-# 	t.push[i]	
-# 	i = i + 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# task_time.each_with_index  do |val,i|
+#   if val == [nil]
+#     @index = i
+#   end
 # end
-# print o_array
 
-# File.readlines('/home/webwerks/Ruby/test.txt') do |li|
-#   puts li if (li[/\d+|min/])
-# end
-
-d.split("\n").map { |s| s.to_i }
-print d
+# task_time.insert(@index, 5)
+# task_time.compact!
+# puts task_time
+#  
